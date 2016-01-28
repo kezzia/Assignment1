@@ -1,0 +1,10 @@
+
+public class Order {
+	String trackingNumber;
+	String customer;
+	String shippingMode;
+	String shippingDate;
+	String category;
+	String[] items = new String[MAX_ORDER];
+
+}

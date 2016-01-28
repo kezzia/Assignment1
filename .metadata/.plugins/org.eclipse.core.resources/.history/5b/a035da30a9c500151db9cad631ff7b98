@@ -1,0 +1,23 @@
+public class main {
+
+	public static void main(String[] args) {
+		int idNum = 0;
+		
+		Customer c1 = new Customer(idNum);
+		
+		idNum = idNum + 1;
+		Customer c2 = new Customer(idNum);
+		
+		c1.setName("P. Sherman");
+		c1.setAddress("42 Wallaby Way, Sydney");
+		c1.setNumber(1234567);
+		
+		c2.setName("Kezzia Carter");
+		c2.setAddress("2225 4th St. NW, Washington DC");
+		c2.setNumber(1631708);
+
+	}
+	
+}
+
+

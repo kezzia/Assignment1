@@ -1,0 +1,18 @@
+public class main {
+
+	public static void main(String[] args) {
+		int idNum = 0;
+		String[] merch = new String[20];
+		
+		Customer c1 = new Customer(idNum);
+		c1.setName("P Sherman");
+		c1.setAddress("blah");
+		c1.setNumber(11);
+		
+		//c1.getInfo();
+		c1.printCustomer();
+	}
+	
+}
+
+

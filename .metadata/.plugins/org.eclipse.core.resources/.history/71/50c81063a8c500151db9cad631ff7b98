@@ -1,0 +1,13 @@
+public class main {
+
+	public static void main(String[] args) {
+		int idNum = 0;
+		
+		Customer c1 = new Customer(idNum);
+		Customer c2;
+
+	}
+	
+}
+
+
