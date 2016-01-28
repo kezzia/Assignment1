@@ -1,0 +1,82 @@
+import java.util.Scanner;
+
+public class main {
+	static int compIndex = 0;
+	static int individualIndex = 0;
+	private static final int MAXSIZE = 20;
+	static Company[] compDatabase = new Company[MAXSIZE];
+	static Individual[] individualDatabase = new Individual[MAXSIZE];
+	
+	//returns true if the order is for a company
+	static boolean isCompany() {
+		Scanner in = new Scanner(System.in);
+		
+		System.out.println("Are you ordering on behalf of a company? ");
+		String answer = in.nextLine();
+		if ( !(answer.equals("yes")) && !(answer.equals("Yes")) && !(answer.equals("YES")) )
+			return false;
+		else
+			return true;
+		
+	}
+	
+	static void 
+
+	public static void main(String[] args) {
+		String[] merch = {"Lots and Lots of Cars and Trains",
+				"Unreasonably Large Pikachu Plush",
+				"A suitcase full of flies",
+				"Labyrinth Poster (Autographed by me)",
+				"Four and a Half Human Teeth", "Necronomicon (Gently used)", 
+				"Item 7", "Item 8", "Item 9", "Item 10",
+				"Item 11", "Item 12"};
+		
+		//print list of merch
+		for (int i = 0; i < merch.length; i++) {
+			System.out.println((i + 1) + ". " + merch[i]);
+		}
+		
+		
+		if (isCompany()) {
+			System.out.println("A company order was created...");
+			Company cust = new Company();
+			cust.getInfo();
+			
+			compDatabase[compIndex] = cust;
+			compDatabase[compIndex].printCompany();
+			compIndex++;
+		}
+		else {
+			System.out.println("An individual order was created...");
+			Individual cust = new Individual();
+			cust.setID();
+			cust.setName("P Sherman");
+			cust.setAddress("blah");
+			cust.setNumber(11);
+			
+			individualDatabase[individualIndex] = cust;
+			individualDatabase[individualIndex].printIndividual();
+			individualIndex++;
+		}
+		
+		
+	
+		/*
+		Customer c1 = new Customer();
+		c1.setID();
+		c1.setName("P Sherman");
+		c1.setAddress("blah");
+		c1.setNumber(11);
+		
+		Customer c2 = new Customer();
+		*/
+		
+		
+
+		//c1.getInfo();
+		//c1.printCustomer();
+	}
+	
+}
+
+

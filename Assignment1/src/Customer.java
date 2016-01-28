@@ -9,15 +9,16 @@ public class Customer {
 	String name;
 	String address;
 	long telephoneNumber;
-	static int id;
-	int orderSize = 0;
-	int maxOrderSize = 12;
+	int id = 0;
 	int[] order = new int[12];		//the actual items in the order
 	
 	//class constructor
-	public Customer(int custID) {
-		this.id = custID;
+	public Customer() {}
+	
+	public void setID() {
+		id++;
 	}	
+	
 	
 	//assigns the customer's address to the field address
 	public void setAddress(String custAddress) {
@@ -29,13 +30,16 @@ public class Customer {
 		telephoneNumber = custNumber;
 	}
 	
+	//assigns customer's name
 	public void setName(String custName) {
 		name = custName;
 	}
-	
+
 	//gets customers info
 	public void getInfo() {
 		Scanner in = new Scanner(System.in);
+		
+		this.setID();
 		
 		System.out.println("Enter your name: ");
 		String nameInput = in.nextLine();
@@ -50,6 +54,7 @@ public class Customer {
 		this.setNumber(numInput);
 	}
 
+/*
 	//prints customers info
 	public void printCustomer() {
 		System.out.println("\nID number: " + id);
@@ -58,20 +63,7 @@ public class Customer {
 		System.out.println("Telephone number: " + telephoneNumber);
 		
 	}
+*/
 	
 }
 
-class Company extends Customer {
-	double DISCOUNT = .05;
-	
-	public Company() {
-		super(id);
-	}
-}
-
-class Individual extends Customer {
-	String license;
-	public Individual() {
-		super(id);
-	}
-}
